@@ -1,36 +1,49 @@
-// split():
+//detrmine given number is positive,negative,zero.
+function checkNumber(num) {
+    if (num > 0) {
+      console.log('positive');
+    } else if (num < 0) {
+      console.log('negative');
+    } else {
+      console.log('zero');
+    }
+  }
+  checkNumber(5);    
+  checkNumber(-3);   
+  checkNumber(0);     
 
-let w = "blueberry,chickoo,Grapes,berry"
-console.log(w.split(","));
+//find min and max vaalues
+  const numbers = [3, 5, 7, 2, 9, -1, 4];
+  const maxValue = Math.max(...numbers);
+  console.log('Max val:', maxValue);  
+  const minValue = Math.min(...numbers);
+  console.log('Min val', minValue);  
 
-// replace():
+// current date and time
+const now=new Date();
+console.log(now);
 
-let name ="hello afrin";
-console.log(name.replace("hello","hi"));
+// Function to add 7 days to a given date
+function addSevenDays(date) {
+  const newDate = new Date(date); 
+  newDate.setDate(newDate.getDate() + 7); 
+  return newDate;
+}
+const currentDate = new Date();  
+console.log("Current Date:", currentDate);
+const newDate = addSevenDays(currentDate);
+console.log("New Date (7 days later):", newDate);
 
-//substring():
-
-let str = "Hello Banglore";
-console.log(str.substring(6));
-
-//map():
-
-let arr1= [1,2,3,4,5];
-let newArr = arr1.map(x => x * 2);
-console.log(newArr);
-
-//filter():
-
-let arr2 = [1,2,3,4,5,6,7,8,9];
-let evenArr = arr2.filter(x => x % 2 === 0);
-console.log(evenArr);
-
-//reduce():
-
-let new1 = [1,2,3,4];
-let sum = new1.reduce((total, num) => total + num, 0);
-console.log(sum);
-
-
-
-
+//to check if a number is positive
+function isPositive(number) {
+  if (number > 0) {
+      console.log('is a positive number.');
+      return true;
+  } else {
+      console.log('is not a positive number.');
+      return false;
+  }
+}
+isPositive(10);  
+isPositive(-5);  
+isPositive(0);   ]
